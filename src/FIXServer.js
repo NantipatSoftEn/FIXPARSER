@@ -36,7 +36,7 @@ export default class FIXServer extends EventEmitter {
         this.target = null;
         this.heartBeatInterval = null;
         this.heartBeatIntervalId = null;
-        this.fixVersion = 'FIX.5.0SP2';
+        this.fixVersion = 'FIXT.1.1';
     }
 
     createServer(host = 'localhost', port = '9878', protocol = PROTOCOL_TCP) {

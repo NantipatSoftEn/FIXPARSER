@@ -36,7 +36,7 @@ export default class FIXParser extends EventEmitter {
         this.messageSequence = 1;
         this.heartBeatInterval = null;
         this.heartBeatIntervalId = null;
-        this.fixVersion = 'FIX.5.0SP2';
+        this.fixVersion = 'FIXT.1.1';
     }
 
     connect({
@@ -65,8 +65,9 @@ export default class FIXParser extends EventEmitter {
         this.clientHandler.sender = sender;
         this.clientHandler.target = target;
         this.clientHandler.heartBeatInterval = heartbeatIntervalMs;
-        this.clientHandler.fixVersion = fixVersion;
         this.clientHandler.connect();
+
+        this.fixVersion = fixVersion;
     }
 
     getNextTargetMsgSeqNum() {

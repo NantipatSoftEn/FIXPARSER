@@ -31,7 +31,7 @@ export default class FIXParserBrowser extends EventEmitter {
         this.messageSequence = 1;
         this.heartBeatInterval = null;
         this.heartBeatIntervalId = null;
-        this.fixVersion = 'FIX.5.0SP2';
+        this.fixVersion = 'FIXT.1.1';
     }
 
     stopHeartbeat() {
